@@ -13,6 +13,10 @@
 		EA003F371DBE4C6300F5177C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA003F351DBE4C6300F5177C /* Main.storyboard */; };
 		EA003F391DBE4C6300F5177C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA003F381DBE4C6300F5177C /* Assets.xcassets */; };
 		EA003F3C1DBE4C6300F5177C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA003F3A1DBE4C6300F5177C /* LaunchScreen.storyboard */; };
+		EA003F481DBE5C4E00F5177C /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA003F441DBE5C4E00F5177C /* categories.plist */; };
+		EA003F491DBE5C4E00F5177C /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA003F451DBE5C4E00F5177C /* cities.plist */; };
+		EA003F4A1DBE5C4E00F5177C /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA003F461DBE5C4E00F5177C /* cityGroups.plist */; };
+		EA003F4B1DBE5C4E00F5177C /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA003F471DBE5C4E00F5177C /* sorts.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		EA003F381DBE4C6300F5177C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA003F3B1DBE4C6300F5177C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA003F3D1DBE4C6300F5177C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA003F441DBE5C4E00F5177C /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		EA003F451DBE5C4E00F5177C /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		EA003F461DBE5C4E00F5177C /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		EA003F471DBE5C4E00F5177C /* sorts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sorts.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +82,21 @@
 		EA003F2C1DBE4C6300F5177C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA003F431DBE5C4E00F5177C /* Plist */,
 				EA003F2D1DBE4C6300F5177C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA003F431DBE5C4E00F5177C /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				EA003F441DBE5C4E00F5177C /* categories.plist */,
+				EA003F451DBE5C4E00F5177C /* cities.plist */,
+				EA003F461DBE5C4E00F5177C /* cityGroups.plist */,
+				EA003F471DBE5C4E00F5177C /* sorts.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +158,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA003F481DBE5C4E00F5177C /* categories.plist in Resources */,
 				EA003F3C1DBE4C6300F5177C /* LaunchScreen.storyboard in Resources */,
+				EA003F4B1DBE5C4E00F5177C /* sorts.plist in Resources */,
 				EA003F391DBE4C6300F5177C /* Assets.xcassets in Resources */,
+				EA003F491DBE5C4E00F5177C /* cities.plist in Resources */,
 				EA003F371DBE4C6300F5177C /* Main.storyboard in Resources */,
+				EA003F4A1DBE5C4E00F5177C /* cityGroups.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,11 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = YHMeiTuanHD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.yyh.YHMeiTuanHD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -277,11 +303,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = YHMeiTuanHD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.yyh.YHMeiTuanHD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -304,6 +332,7 @@
 				EA003F421DBE4C6300F5177C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
