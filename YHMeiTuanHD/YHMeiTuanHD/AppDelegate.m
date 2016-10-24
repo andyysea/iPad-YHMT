@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YHHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    YHHomeViewController *VC = [[YHHomeViewController alloc] init];
+    _window.rootViewController = VC;
+    
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YHHomeViewController.h
 //  YHMeiTuanHD
 //
 //  Created by 杨应海 on 16/10/24.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface YHHomeViewController : UIViewController
 
 @end
-
