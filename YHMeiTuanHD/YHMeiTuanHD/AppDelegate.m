@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YHHomeViewController.h"
+#import "YHNavgationController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,8 @@
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     YHHomeViewController *VC = [[YHHomeViewController alloc] init];
-    _window.rootViewController = VC;
+    YHNavgationController *Nav = [[YHNavgationController alloc] initWithRootViewController:VC];
+    _window.rootViewController = Nav;
     
     [_window makeKeyAndVisible];
     
