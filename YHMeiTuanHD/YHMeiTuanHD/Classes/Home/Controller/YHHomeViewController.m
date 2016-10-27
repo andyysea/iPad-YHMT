@@ -30,9 +30,12 @@ static NSString *collectionCellID = @"collectionCellID";
 - (void)setupRightNavItems {
     /**地图按钮 */
     UIBarButtonItem *mapItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(mapItemClick) icon:@"icon_map" highLightedIcon:@"icon_map_highlighted"];
+    // 设置导航栏item之间的间距
+    mapItem.customView.width = 60;
     
     /**搜索按钮 */
     UIBarButtonItem *searchItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(searchItemClick) icon:@"icon_search" highLightedIcon:@"icon_search_highlighted"];
+    searchItem.customView.width = 60;
     
     self.navigationItem.rightBarButtonItems = @[mapItem,searchItem];
 }
