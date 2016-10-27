@@ -20,6 +20,8 @@
     CGRect rect = button.frame;
     rect.size = button.currentImage.size;
     button.frame = rect;
+//    button.size = button.currentImage.size; // 这个是对的，因为添加了视图的分类，可以替代上面三居代码
+//    button.frame.size = button.currentImage.size;//这个是错误的，因为结构体不能直接修改
     
     // 按钮添加监听方法，要有监听者，以及监听者调用的监听方法
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];

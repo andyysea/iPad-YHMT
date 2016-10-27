@@ -15,3 +15,5 @@
 + (instancetype)barButtonItemWithTarget:(id)target action:(SEL)action icon:(NSString *)icon highLightedIcon:(NSString *)highLightedIcon;
 
 @end
+
+
