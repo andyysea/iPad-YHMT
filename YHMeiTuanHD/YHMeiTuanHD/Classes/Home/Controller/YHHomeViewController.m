@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = YHColor(230, 230, 230, 1.0);
+    NSLog(@"__function");
 }
 
 - (void)didReceiveMemoryWarning {
