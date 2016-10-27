@@ -8,7 +8,10 @@
 
 #import "YHHomeViewController.h"
 
-@interface YHHomeViewController ()
+/** 可重用标示符 */
+static NSString *collectionCellID = @"collectionCellID";
+
+@interface YHHomeViewController () <UICollectionViewDataSource>
 
 @end
 
@@ -17,23 +20,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = YHColor(230, 230, 230, 1.0);
-    NSLog(@"__function");
+    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = YHColor(230, 230, 230, 1.0);
+    
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 0;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 0;
 }
-*/
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:collectionCellID forIndexPath:indexPath];
+    
+    
+    return cell;
+}
+#pragma mark - 设置界面
+- (void)setupUI {
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    collectionView.backgroundColor = YHColor(230, 230, 230, 1.0);
+    [self.view addSubview:collectionView];
+    
+    collectionView.dataSource = self;
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collectionCellID];
+}
 
 @end
