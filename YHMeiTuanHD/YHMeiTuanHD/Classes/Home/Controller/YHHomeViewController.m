@@ -7,6 +7,7 @@
 //
 
 #import "YHHomeViewController.h"
+#import "YHHomeNavView.h"
 
 /** 可重用标示符 */
 static NSString *collectionCellID = @"collectionCellID";
@@ -23,22 +24,44 @@ static NSString *collectionCellID = @"collectionCellID";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupUI];
+    [self setupLeftNavItems];
     [self setupRightNavItems];
+}
+#pragma mark - 设置左侧导航栏监听方法
+- (void)setupLeftNavItems {
+    // 1. logo
+    UIBarButtonItem *logoItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"icon_meituan_logo"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:nil action:nil];
+    logoItem.enabled = NO;
+    
+    // 2. 分类
+    YHHomeNavView *categoryNavView = [YHHomeNavView homeNavView];
+    UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc] initWithCustomView:categoryNavView];
+    
+    // 3. 区域
+    YHHomeNavView *districtNavView = [YHHomeNavView homeNavView];
+    UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtNavView];
+    
+    // 4. 排序
+    YHHomeNavView *sortNavView = [YHHomeNavView homeNavView];
+    UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortNavView];
+    
+    self.navigationItem.leftBarButtonItems = @[logoItem, categoryItem,districtItem,sortItem];
 }
 
 #pragma mark - 设置右侧导航栏
 - (void)setupRightNavItems {
-    /**地图按钮 */
+    // 1. 地图按钮
     UIBarButtonItem *mapItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(mapItemClick) icon:@"icon_map" highLightedIcon:@"icon_map_highlighted"];
     // 设置导航栏item之间的间距
     mapItem.customView.width = 60;
     
-    /**搜索按钮 */
+    // 2. 搜索按钮
     UIBarButtonItem *searchItem = [UIBarButtonItem barButtonItemWithTarget:self action:@selector(searchItemClick) icon:@"icon_search" highLightedIcon:@"icon_search_highlighted"];
     searchItem.customView.width = 60;
     
     self.navigationItem.rightBarButtonItems = @[mapItem,searchItem];
 }
+
 #pragma mark - 导航栏按钮的监听方法
 /** 
     搜索按钮的监听方法

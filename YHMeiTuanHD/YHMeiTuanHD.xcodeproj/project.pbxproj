@@ -18,6 +18,8 @@
 		EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F5B1DBE653400F5177C /* YHNavgationController.m */; };
 		EA003F5F1DBE6A2700F5177C /* UIBarButtonItem+YHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F5E1DBE6A2700F5177C /* UIBarButtonItem+YHCategory.m */; };
 		EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F611DC1C91100F5177C /* UIView+YHCategory.m */; };
+		EA003F651DC1D95200F5177C /* YHHomeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F641DC1D95200F5177C /* YHHomeNavView.m */; };
+		EA003F671DC1D9D200F5177C /* YHHomeNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA003F661DC1D9D200F5177C /* YHHomeNavView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,9 @@
 		EA003F5E1DBE6A2700F5177C /* UIBarButtonItem+YHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+YHCategory.m"; sourceTree = "<group>"; };
 		EA003F601DC1C91100F5177C /* UIView+YHCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YHCategory.h"; sourceTree = "<group>"; };
 		EA003F611DC1C91100F5177C /* UIView+YHCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YHCategory.m"; sourceTree = "<group>"; };
+		EA003F631DC1D95200F5177C /* YHHomeNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHHomeNavView.h; sourceTree = "<group>"; };
+		EA003F641DC1D95200F5177C /* YHHomeNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHHomeNavView.m; sourceTree = "<group>"; };
+		EA003F661DC1D9D200F5177C /* YHHomeNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHHomeNavView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +146,9 @@
 		EA003F501DBE5E6200F5177C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA003F631DC1D95200F5177C /* YHHomeNavView.h */,
+				EA003F641DC1D95200F5177C /* YHHomeNavView.m */,
+				EA003F661DC1D9D200F5177C /* YHHomeNavView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA003F671DC1D9D200F5177C /* YHHomeNavView.xib in Resources */,
 				EA003F481DBE5C4E00F5177C /* categories.plist in Resources */,
 				EA003F4B1DBE5C4E00F5177C /* sorts.plist in Resources */,
 				EA003F391DBE4C6300F5177C /* Assets.xcassets in Resources */,
@@ -269,6 +278,7 @@
 				EA003F2E1DBE4C6300F5177C /* main.m in Sources */,
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
 				EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */,
+				EA003F651DC1D95200F5177C /* YHHomeNavView.m in Sources */,
 				EA003F581DBE5EA200F5177C /* YHHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
