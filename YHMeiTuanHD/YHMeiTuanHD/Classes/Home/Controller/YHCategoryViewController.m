@@ -7,6 +7,7 @@
 //
 
 #import "YHCategoryViewController.h"
+#import "YHDropdownView.h"
 
 @interface YHCategoryViewController ()
 
@@ -16,22 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 1> 创建下拉菜单
+    YHDropdownView *dropView = [YHDropdownView dropdownView];
+    // 2> 添加到根视图
+    [self.view addSubview:dropView];
+    // 3> 让控制器被展现出来的大小跟dropView加载的xib中大小一致
+    self.preferredContentSize = dropView.size;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
 
 @end
+
+
+
+

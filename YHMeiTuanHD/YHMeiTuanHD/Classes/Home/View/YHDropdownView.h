@@ -6,6 +6,9 @@
 //  Copyright © 2016年 YYH. All rights reserved.
 //
 
+/** 
+    这里把下拉菜单的两个表格抽出来是为了其他下拉控制器的复用，可以直接添加这个视图就可以
+ */
 #import <UIKit/UIKit.h>
 
 @interface YHDropdownView : UIView
