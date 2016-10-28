@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YHHomeNavView : UIView
+@interface YHHomeNavView : UIControl
 /** 
     导航条上面的自定含义 Item 视图
  */

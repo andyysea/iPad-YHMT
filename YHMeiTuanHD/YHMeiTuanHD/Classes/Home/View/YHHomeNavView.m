@@ -16,6 +16,11 @@
 }
 
 
+// category 导航栏分类item按钮的点击方法
+- (IBAction)buttonClick:(id)sender {
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
 
 @end
 

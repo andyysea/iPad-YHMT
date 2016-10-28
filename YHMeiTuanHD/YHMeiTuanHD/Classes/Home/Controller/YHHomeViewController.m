@@ -37,6 +37,9 @@ static NSString *collectionCellID = @"collectionCellID";
     YHHomeNavView *categoryNavView = [YHHomeNavView homeNavView];
     UIBarButtonItem *categoryItem = [[UIBarButtonItem alloc] initWithCustomView:categoryNavView];
     
+    // 自定义控件监听方法
+    [categoryNavView addTarget:self action:@selector(categoryClick) forControlEvents:UIControlEventValueChanged];
+    
     // 3. 区域
     YHHomeNavView *districtNavView = [YHHomeNavView homeNavView];
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtNavView];
@@ -64,17 +67,24 @@ static NSString *collectionCellID = @"collectionCellID";
 
 #pragma mark - 导航栏按钮的监听方法
 /** 
+    分类按钮的点击方法
+ */
+- (void)categoryClick {
+    NSLog(@"categoryClick");
+}
+
+/** 
     搜索按钮的监听方法
  */
 - (void)searchItemClick {
-    
+    NSLog(@"searchItemClick");
 }
 
 /**
  *  地图按钮的监听方法
  */
 - (void)mapItemClick {
-    
+    NSLog(@"mapItemClick");
 }
 
                                 
