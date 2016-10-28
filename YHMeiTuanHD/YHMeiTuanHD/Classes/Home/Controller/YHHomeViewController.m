@@ -8,6 +8,7 @@
 
 #import "YHHomeViewController.h"
 #import "YHHomeNavView.h"
+#import "YHCategoryViewController.h"
 
 /** 可重用标示符 */
 static NSString *collectionCellID = @"collectionCellID";
@@ -70,7 +71,15 @@ static NSString *collectionCellID = @"collectionCellID";
     分类按钮的点击方法
  */
 - (void)categoryClick {
-    NSLog(@"categoryClick");
+    YHCategoryViewController *categoryVC = [[YHCategoryViewController alloc] init];
+    // 1> 设置呈现样式
+    categoryVC.modalPresentationStyle = UIModalPresentationPopover;
+    // 2> 取出popover视图
+    UIPopoverPresentationController *categoryPopover = categoryVC.popoverPresentationController;
+    // 3> 设置指向的 item
+    categoryPopover.barButtonItem = self.navigationItem.leftBarButtonItems[1];
+    // 4> 展现分类控制器
+    [self presentViewController:categoryVC animated:YES completion:nil];
 }
 
 /** 

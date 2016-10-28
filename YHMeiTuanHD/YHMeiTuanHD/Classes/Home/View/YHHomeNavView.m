@@ -11,7 +11,6 @@
 @implementation YHHomeNavView
 
 + (instancetype)homeNavView {
-//    return [[UINib nibWithNibName:@"YHHomeNavView" bundle:nil] instantiateWithOwner:nil options:nil].lastObject;
     return [[NSBundle mainBundle] loadNibNamed:@"YHHomeNavView" owner:nil options:nil].lastObject;
 }
 
