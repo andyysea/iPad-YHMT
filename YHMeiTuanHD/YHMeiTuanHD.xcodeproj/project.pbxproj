@@ -24,6 +24,7 @@
 		EA874F711DC358150015FFBA /* YHDropdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA874F701DC358150015FFBA /* YHDropdownView.xib */; };
 		EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F731DC359840015FFBA /* YHCategoryViewController.m */; };
 		EA874F771DC35DFE0015FFBA /* YHDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F761DC35DFE0015FFBA /* YHDropdownView.m */; };
+		EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		EA874F731DC359840015FFBA /* YHCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCategoryViewController.m; sourceTree = "<group>"; };
 		EA874F751DC35DFE0015FFBA /* YHDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDropdownView.h; sourceTree = "<group>"; };
 		EA874F761DC35DFE0015FFBA /* YHDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropdownView.m; sourceTree = "<group>"; };
+		EA874F7A1DC4858D0015FFBA /* YHCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCategoryModel.h; sourceTree = "<group>"; };
+		EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCategoryModel.m; sourceTree = "<group>"; };
 		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +176,8 @@
 		EA003F4F1DBE5E6200F5177C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA874F7A1DC4858D0015FFBA /* YHCategoryModel.h */,
+				EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				EA874F771DC35DFE0015FFBA /* YHDropdownView.m in Sources */,
 				EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */,
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
+				EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */,
 				EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */,
 				EA003F651DC1D95200F5177C /* YHHomeNavView.m in Sources */,
 				EA003F581DBE5EA200F5177C /* YHHomeViewController.m in Sources */,

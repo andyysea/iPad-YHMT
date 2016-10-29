@@ -7,8 +7,15 @@
 //
 
 #import "YHDropdownView.h"
+#import "YHCategoryModel.h"
 
 @interface YHDropdownView () <UITableViewDataSource,UITableViewDelegate>
+/** 左边表格视图 */
+@property (weak, nonatomic) IBOutlet UITableView *leftTableView;
+/** 右边表格视图 */
+@property (weak, nonatomic) IBOutlet UITableView *rightTableView;
+/** 左边表格视图选中的cell对应的模型数据 */
+@property (nonatomic, strong) YHCategoryModel *categorySelectLeftModel;
 
 @end
 
@@ -30,23 +37,47 @@
 }
 
 #pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    if (tableView == self.leftTableView) {
+        return self.categoryArray.count;
+    }
+    // 如果是第二个表格，那数据来源是选中的左边表格，所以要在选中左边的表格的Cell的代理方法中记录一下对应的‘选中的模型’
+    
+    return self.categorySelectLeftModel.subcategories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+
+    UITableViewCell *cell = nil;
+    if (tableView == self.leftTableView) {
+        static NSString *leftCellId = @"leftCellId";
+        cell = [tableView dequeueReusableCellWithIdentifier:leftCellId];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCellId];
+        }
+        YHCategoryModel *categoryModel = self.categoryArray[indexPath.row];
+        cell.textLabel.text = categoryModel.name;
+    } else {
+        static NSString *rightCellId = @"rightCellId";
+        cell = [tableView dequeueReusableCellWithIdentifier:rightCellId];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightCellId];
+        }
+        cell.textLabel.text = self.categorySelectLeftModel.subcategories[indexPath.row];
     }
     
     return cell;
 }
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.leftTableView) {
+        //1> 记录一下选中的模型
+        self.categorySelectLeftModel = self.categoryArray[indexPath.row];
+        //2> 右边的表格要刷新数据
+        [self.rightTableView reloadData];
+    }
+}
+
 
 
 @end
