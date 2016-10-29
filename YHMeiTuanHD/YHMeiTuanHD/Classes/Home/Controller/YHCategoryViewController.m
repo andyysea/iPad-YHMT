@@ -23,6 +23,8 @@
     [self.view addSubview:dropView];
     // 3> 让控制器被展现出来的大小跟dropView加载的xib中大小一致
     self.preferredContentSize = dropView.size;
+    // 4> 创建模型，给分类下拉菜单传递模型数据数组
+    
 }
 
 

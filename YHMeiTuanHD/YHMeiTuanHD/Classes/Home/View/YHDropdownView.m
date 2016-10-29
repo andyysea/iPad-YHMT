@@ -8,14 +8,16 @@
 
 #import "YHDropdownView.h"
 
+@interface YHDropdownView () <UITableViewDataSource,UITableViewDelegate>
+
+@end
+
 @implementation YHDropdownView
 
-
+/** 加载本视图的类方法 */
 + (instancetype)dropdownView {
-    
     UINib *nib = [UINib nibWithNibName:@"YHDropdownView" bundle:nil];
     YHDropdownView *dropdownView = [nib instantiateWithOwner:nil options:nil].lastObject;
-    NSLog(@"%@", NSStringFromCGRect(dropdownView.bounds));
     return dropdownView;
 }
 
@@ -26,5 +28,25 @@
 - (void)awakeFromNib {
     self.autoresizingMask = UIViewAutoresizingNone;
 }
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellId = @"cellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
+    
+    return cell;
+}
+
 
 @end

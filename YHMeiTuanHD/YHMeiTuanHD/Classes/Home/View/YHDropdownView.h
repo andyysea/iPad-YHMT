@@ -13,6 +13,10 @@
 
 @interface YHDropdownView : UIView
 
+/** 分类数据数组 */
+@property (nonatomic, strong) NSArray *categoryArray;
+
+
 + (instancetype)dropdownView;
 
 @end
