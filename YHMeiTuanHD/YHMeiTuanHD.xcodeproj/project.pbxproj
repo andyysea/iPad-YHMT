@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E25FA532C94707969533392B /* libPods-YHMeiTuanHD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C97F78923753B455525BADCF /* libPods-YHMeiTuanHD.a */; };
 		EA003F2E1DBE4C6300F5177C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F2D1DBE4C6300F5177C /* main.m */; };
 		EA003F311DBE4C6300F5177C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA003F301DBE4C6300F5177C /* AppDelegate.m */; };
 		EA003F391DBE4C6300F5177C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA003F381DBE4C6300F5177C /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68325FE114259909543F39C7 /* Pods-YHMeiTuanHD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.release.xcconfig"; sourceTree = "<group>"; };
+		C97F78923753B455525BADCF /* libPods-YHMeiTuanHD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YHMeiTuanHD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA003F291DBE4C6300F5177C /* YHMeiTuanHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHMeiTuanHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA003F2D1DBE4C6300F5177C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA003F2F1DBE4C6300F5177C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		EA874F731DC359840015FFBA /* YHCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCategoryViewController.m; sourceTree = "<group>"; };
 		EA874F751DC35DFE0015FFBA /* YHDropdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDropdownView.h; sourceTree = "<group>"; };
 		EA874F761DC35DFE0015FFBA /* YHDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropdownView.m; sourceTree = "<group>"; };
+		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25FA532C94707969533392B /* libPods-YHMeiTuanHD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC6B5397BC112AE2DF8EA9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */,
+				68325FE114259909543F39C7 /* Pods-YHMeiTuanHD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3B8DF9A773EF1A0EDBAD239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C97F78923753B455525BADCF /* libPods-YHMeiTuanHD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA003F201DBE4C6300F5177C = {
 			isa = PBXGroup;
 			children = (
 				EA003F2B1DBE4C6300F5177C /* YHMeiTuanHD */,
 				EA003F2A1DBE4C6300F5177C /* Products */,
+				1AC6B5397BC112AE2DF8EA9E /* Pods */,
+				B3B8DF9A773EF1A0EDBAD239 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +113,6 @@
 				EA003F301DBE4C6300F5177C /* AppDelegate.m */,
 				EA003F4C1DBE5E6200F5177C /* Classes */,
 				EA003F2C1DBE4C6300F5177C /* Supporting Files */,
-				EA003F591DBE60FD00F5177C /* PrefixHeader.pch */,
 			);
 			path = YHMeiTuanHD;
 			sourceTree = "<group>";
@@ -97,6 +120,7 @@
 		EA003F2C1DBE4C6300F5177C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA003F591DBE60FD00F5177C /* PrefixHeader.pch */,
 				EA003F431DBE5C4E00F5177C /* Plist */,
 				EA003F381DBE4C6300F5177C /* Assets.xcassets */,
 				EA003F3D1DBE4C6300F5177C /* Info.plist */,
@@ -218,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA003F401DBE4C6300F5177C /* Build configuration list for PBXNativeTarget "YHMeiTuanHD" */;
 			buildPhases = (
+				F1CF1B80C11FED6CF7828D36 /* [CP] Check Pods Manifest.lock */,
 				EA003F251DBE4C6300F5177C /* Sources */,
 				EA003F261DBE4C6300F5177C /* Frameworks */,
 				EA003F271DBE4C6300F5177C /* Resources */,
+				2DF09D2C90C1FA0D1FFB11A6 /* [CP] Embed Pods Frameworks */,
+				04986022C3B3A590E0FA2F1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +308,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04986022C3B3A590E0FA2F1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DF09D2C90C1FA0D1FFB11A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1CF1B80C11FED6CF7828D36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EA003F251DBE4C6300F5177C /* Sources */ = {
@@ -386,6 +461,7 @@
 		};
 		EA003F411DBE4C6300F5177C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -401,6 +477,7 @@
 		};
 		EA003F421DBE4C6300F5177C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68325FE114259909543F39C7 /* Pods-YHMeiTuanHD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

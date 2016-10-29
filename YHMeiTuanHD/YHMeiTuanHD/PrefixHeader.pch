@@ -18,8 +18,12 @@
 // RGB颜色
 #define YHColor(r,g,b,c) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:c];
 
-
+// 分类文件
 #import "UIBarButtonItem+YHCategory.h"
 #import "UIView+YHCategory.h"
+
+
+// 第三方库
+#import "YYModel.h"
 
 #endif
