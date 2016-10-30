@@ -8,6 +8,8 @@
 
 #import "YHDropdownView.h"
 #import "YHCategoryModel.h"
+#import "YHDropdownViewLeftCell.h"
+#import "YHDropdownViewRightCell.h"
 
 @interface YHDropdownView () <UITableViewDataSource,UITableViewDelegate>
 /** 左边表格视图 */
@@ -48,45 +50,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = nil;
     if (tableView == self.leftTableView) {
-        static NSString *leftCellId = @"leftCellId";
-        cell = [tableView dequeueReusableCellWithIdentifier:leftCellId];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCellId];
-            // 设置cell颜色和选中颜色, 要在创建cell的时候就设置好
-            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
-            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
-        }
+        YHDropdownViewLeftCell *leftCell = [YHDropdownViewLeftCell dropdownViewLeftCellWithTableView:tableView];
         
         // 1> 获取模型数据
         YHCategoryModel *categoryModel = self.categoryArray[indexPath.row];
-        // 2> 设置标题
-        cell.textLabel.text = categoryModel.name;
-        // 3> 设置图像
-        cell.imageView.image = [UIImage imageNamed:categoryModel.icon];
-        // 4> 设置高亮图像
-        cell.imageView.highlightedImage = [UIImage imageNamed:categoryModel.highlighted_icon];
-        // 5> 设置指示箭头
-        if (categoryModel.subcategories) {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryNone;  // 这句话是为了没有箭头的时候重新设回去
-        }
+        // 2> 传递模型数据
+        leftCell.categoryModel = categoryModel;
+        
+        return leftCell;
         
     } else {
-        static NSString *rightCellId = @"rightCellId";
-        cell = [tableView dequeueReusableCellWithIdentifier:rightCellId];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightCellId];
-            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_rightpart"]];
-            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_right_selected"]];
-        }
-        cell.textLabel.text = self.categorySelectLeftModel.subcategories[indexPath.row];
-        
+        YHDropdownViewRightCell *rightCell = [YHDropdownViewRightCell dropdownViewRightCellWithTableView:tableView];
+        rightCell.textLabel.text = self.categorySelectLeftModel.subcategories[indexPath.row];
+        return rightCell;
     }
     
-    return cell;
 }
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

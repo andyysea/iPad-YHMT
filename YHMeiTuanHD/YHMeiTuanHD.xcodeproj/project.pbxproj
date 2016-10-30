@@ -25,6 +25,8 @@
 		EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F731DC359840015FFBA /* YHCategoryViewController.m */; };
 		EA874F771DC35DFE0015FFBA /* YHDropdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F761DC35DFE0015FFBA /* YHDropdownView.m */; };
 		EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */; };
+		EAC7F10D1DC5C721001C9F89 /* YHDropdownViewLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7F10C1DC5C721001C9F89 /* YHDropdownViewLeftCell.m */; };
+		EAC7F1101DC5C73F001C9F89 /* YHDropdownViewRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7F10F1DC5C73F001C9F89 /* YHDropdownViewRightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		EA874F761DC35DFE0015FFBA /* YHDropdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropdownView.m; sourceTree = "<group>"; };
 		EA874F7A1DC4858D0015FFBA /* YHCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCategoryModel.h; sourceTree = "<group>"; };
 		EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCategoryModel.m; sourceTree = "<group>"; };
+		EAC7F10B1DC5C721001C9F89 /* YHDropdownViewLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDropdownViewLeftCell.h; sourceTree = "<group>"; };
+		EAC7F10C1DC5C721001C9F89 /* YHDropdownViewLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropdownViewLeftCell.m; sourceTree = "<group>"; };
+		EAC7F10E1DC5C73F001C9F89 /* YHDropdownViewRightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDropdownViewRightCell.h; sourceTree = "<group>"; };
+		EAC7F10F1DC5C73F001C9F89 /* YHDropdownViewRightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDropdownViewRightCell.m; sourceTree = "<group>"; };
 		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +197,10 @@
 				EA874F751DC35DFE0015FFBA /* YHDropdownView.h */,
 				EA874F761DC35DFE0015FFBA /* YHDropdownView.m */,
 				EA874F701DC358150015FFBA /* YHDropdownView.xib */,
+				EAC7F10B1DC5C721001C9F89 /* YHDropdownViewLeftCell.h */,
+				EAC7F10C1DC5C721001C9F89 /* YHDropdownViewLeftCell.m */,
+				EAC7F10E1DC5C73F001C9F89 /* YHDropdownViewRightCell.h */,
+				EAC7F10F1DC5C73F001C9F89 /* YHDropdownViewRightCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,9 +384,11 @@
 				EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */,
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
 				EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */,
+				EAC7F10D1DC5C721001C9F89 /* YHDropdownViewLeftCell.m in Sources */,
 				EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */,
 				EA003F651DC1D95200F5177C /* YHHomeNavView.m in Sources */,
 				EA003F581DBE5EA200F5177C /* YHHomeViewController.m in Sources */,
+				EAC7F1101DC5C73F001C9F89 /* YHDropdownViewRightCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
