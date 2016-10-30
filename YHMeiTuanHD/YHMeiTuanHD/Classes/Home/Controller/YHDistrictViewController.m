@@ -8,7 +8,8 @@
 
 #import "YHDistrictViewController.h"
 #import "YHDropdownView.h"
-
+#import "YHCityViewController.h"
+#import "YHNavgationController.h"
 
 @interface YHDistrictViewController ()
 
@@ -28,6 +29,18 @@
     
     self.preferredContentSize = CGSizeMake(width, height);
 }
+
+
+- (IBAction)SwitchSelectCityClick:(id)sender {
+    YHCityViewController *cityVC = [[YHCityViewController alloc] init];
+    YHNavgationController *nav = [[YHNavgationController alloc] initWithRootViewController:cityVC];
+    
+    nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
 
 
 @end

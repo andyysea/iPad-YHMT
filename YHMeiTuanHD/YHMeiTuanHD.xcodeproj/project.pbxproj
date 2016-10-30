@@ -29,6 +29,7 @@
 		EAC7F1101DC5C73F001C9F89 /* YHDropdownViewRightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC7F10F1DC5C73F001C9F89 /* YHDropdownViewRightCell.m */; };
 		EAEBD7221DC6004B004E58D7 /* YHDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7201DC6004B004E58D7 /* YHDistrictViewController.m */; };
 		EAEBD7231DC6004B004E58D7 /* YHDistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEBD7211DC6004B004E58D7 /* YHDistrictViewController.xib */; };
+		EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		EAEBD71F1DC6004B004E58D7 /* YHDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHDistrictViewController.h; sourceTree = "<group>"; };
 		EAEBD7201DC6004B004E58D7 /* YHDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHDistrictViewController.m; sourceTree = "<group>"; };
 		EAEBD7211DC6004B004E58D7 /* YHDistrictViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHDistrictViewController.xib; sourceTree = "<group>"; };
+		EAEBD7241DC60B4C004E58D7 /* YHCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCityViewController.h; sourceTree = "<group>"; };
+		EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCityViewController.m; sourceTree = "<group>"; };
 		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +186,8 @@
 				EAEBD71F1DC6004B004E58D7 /* YHDistrictViewController.h */,
 				EAEBD7201DC6004B004E58D7 /* YHDistrictViewController.m */,
 				EAEBD7211DC6004B004E58D7 /* YHDistrictViewController.xib */,
+				EAEBD7241DC60B4C004E58D7 /* YHCityViewController.h */,
+				EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */,
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
 				EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */,
+				EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */,
 				EAC7F10D1DC5C721001C9F89 /* YHDropdownViewLeftCell.m in Sources */,
 				EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */,
 				EA003F651DC1D95200F5177C /* YHHomeNavView.m in Sources */,
