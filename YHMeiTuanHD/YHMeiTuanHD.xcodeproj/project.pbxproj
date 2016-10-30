@@ -31,6 +31,7 @@
 		EAEBD7231DC6004B004E58D7 /* YHDistrictViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEBD7211DC6004B004E58D7 /* YHDistrictViewController.xib */; };
 		EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */; };
 		EAEBD7281DC60E8D004E58D7 /* YHCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEBD7271DC60E8D004E58D7 /* YHCityViewController.xib */; };
+		EAEBD72B1DC62771004E58D7 /* YHCityGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		EAEBD7241DC60B4C004E58D7 /* YHCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCityViewController.h; sourceTree = "<group>"; };
 		EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCityViewController.m; sourceTree = "<group>"; };
 		EAEBD7271DC60E8D004E58D7 /* YHCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHCityViewController.xib; sourceTree = "<group>"; };
+		EAEBD7291DC62771004E58D7 /* YHCityGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCityGroupModel.h; sourceTree = "<group>"; };
+		EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCityGroupModel.m; sourceTree = "<group>"; };
 		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +203,8 @@
 			children = (
 				EA874F7A1DC4858D0015FFBA /* YHCategoryModel.h */,
 				EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */,
+				EAEBD7291DC62771004E58D7 /* YHCityGroupModel.h */,
+				EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				EA874F771DC35DFE0015FFBA /* YHDropdownView.m in Sources */,
 				EA874F741DC359840015FFBA /* YHCategoryViewController.m in Sources */,
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
+				EAEBD72B1DC62771004E58D7 /* YHCityGroupModel.m in Sources */,
 				EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */,
 				EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */,
 				EAC7F10D1DC5C721001C9F89 /* YHDropdownViewLeftCell.m in Sources */,

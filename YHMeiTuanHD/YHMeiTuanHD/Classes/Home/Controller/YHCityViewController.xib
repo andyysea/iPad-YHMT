@@ -14,10 +14,35 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="407" height="506"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="请输入城市名或拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="al1-ef-sLH">
+                    <rect key="frame" x="15" y="15" width="377" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q7e-3b-xEl">
+                    <rect key="frame" x="0.0" y="74" width="407" height="432"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mie-NZ-uNL"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="al1-ef-sLH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="40P-3L-5Bp"/>
+                <constraint firstAttribute="bottom" secondItem="Q7e-3b-xEl" secondAttribute="bottom" id="7SN-Fa-c0R"/>
+                <constraint firstItem="al1-ef-sLH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ar2-93-zwK"/>
+                <constraint firstAttribute="trailing" secondItem="Q7e-3b-xEl" secondAttribute="trailing" id="D8C-e4-mBG"/>
+                <constraint firstItem="Q7e-3b-xEl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HjA-nu-9aS"/>
+                <constraint firstAttribute="trailing" secondItem="al1-ef-sLH" secondAttribute="trailing" constant="15" id="apI-3s-A3y"/>
+                <constraint firstItem="Q7e-3b-xEl" firstAttribute="top" secondItem="al1-ef-sLH" secondAttribute="bottom" constant="15" id="qt6-fC-3Ae"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="210.5" y="117"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
 </document>
