@@ -32,13 +32,19 @@
 
 
 - (IBAction)SwitchSelectCityClick:(id)sender {
+    
+    // 1> 因为本身自己就是被展现出来的，所以要用根控制器 展现其他控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // 2> 设置带导航栏的城市控制器
     YHCityViewController *cityVC = [[YHCityViewController alloc] init];
     YHNavgationController *nav = [[YHNavgationController alloc] initWithRootViewController:cityVC];
     
     nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     nav.modalPresentationStyle = UIModalPresentationFormSheet;
     
-    [self presentViewController:nav animated:YES completion:nil];
+    // 3> 用根控制器展现
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
 }
 
 
