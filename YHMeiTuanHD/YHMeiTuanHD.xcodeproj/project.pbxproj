@@ -32,6 +32,8 @@
 		EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */; };
 		EAEBD7281DC60E8D004E58D7 /* YHCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEBD7271DC60E8D004E58D7 /* YHCityViewController.xib */; };
 		EAEBD72B1DC62771004E58D7 /* YHCityGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */; };
+		EAEBD7311DC64D38004E58D7 /* YHCitySearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7301DC64D38004E58D7 /* YHCitySearchResultVC.m */; };
+		EAEBD7341DC64FDB004E58D7 /* YHCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEBD7331DC64FDB004E58D7 /* YHCityModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,10 @@
 		EAEBD7271DC60E8D004E58D7 /* YHCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHCityViewController.xib; sourceTree = "<group>"; };
 		EAEBD7291DC62771004E58D7 /* YHCityGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCityGroupModel.h; sourceTree = "<group>"; };
 		EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCityGroupModel.m; sourceTree = "<group>"; };
+		EAEBD72F1DC64D38004E58D7 /* YHCitySearchResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCitySearchResultVC.h; sourceTree = "<group>"; };
+		EAEBD7301DC64D38004E58D7 /* YHCitySearchResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCitySearchResultVC.m; sourceTree = "<group>"; };
+		EAEBD7321DC64FDB004E58D7 /* YHCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHCityModel.h; sourceTree = "<group>"; };
+		EAEBD7331DC64FDB004E58D7 /* YHCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHCityModel.m; sourceTree = "<group>"; };
 		F7A853098888787FDB815116 /* Pods-YHMeiTuanHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHMeiTuanHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHMeiTuanHD/Pods-YHMeiTuanHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +200,8 @@
 				EAEBD7241DC60B4C004E58D7 /* YHCityViewController.h */,
 				EAEBD7251DC60B4C004E58D7 /* YHCityViewController.m */,
 				EAEBD7271DC60E8D004E58D7 /* YHCityViewController.xib */,
+				EAEBD72F1DC64D38004E58D7 /* YHCitySearchResultVC.h */,
+				EAEBD7301DC64D38004E58D7 /* YHCitySearchResultVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +213,8 @@
 				EA874F7B1DC4858D0015FFBA /* YHCategoryModel.m */,
 				EAEBD7291DC62771004E58D7 /* YHCityGroupModel.h */,
 				EAEBD72A1DC62771004E58D7 /* YHCityGroupModel.m */,
+				EAEBD7321DC64FDB004E58D7 /* YHCityModel.h */,
+				EAEBD7331DC64FDB004E58D7 /* YHCityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +418,8 @@
 				EA003F621DC1C91100F5177C /* UIView+YHCategory.m in Sources */,
 				EAEBD72B1DC62771004E58D7 /* YHCityGroupModel.m in Sources */,
 				EA874F7C1DC4858D0015FFBA /* YHCategoryModel.m in Sources */,
+				EAEBD7311DC64D38004E58D7 /* YHCitySearchResultVC.m in Sources */,
+				EAEBD7341DC64FDB004E58D7 /* YHCityModel.m in Sources */,
 				EAEBD7261DC60B4C004E58D7 /* YHCityViewController.m in Sources */,
 				EAC7F10D1DC5C721001C9F89 /* YHDropdownViewLeftCell.m in Sources */,
 				EA003F5C1DBE653400F5177C /* YHNavgationController.m in Sources */,

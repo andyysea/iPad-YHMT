@@ -8,12 +8,15 @@
 
 #import "YHCityViewController.h"
 #import "YHCityGroupModel.h"
+#import "YHCitySearchResultVC.h"
 
 @interface YHCityViewController () <UITableViewDataSource, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 /** 遮盖按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *coverButton;
+/** 搜索结果控制器 */
+@property (nonatomic, weak) YHCitySearchResultVC *searchResultVC;
 
 /** cityGroupPlist的模型数据 */
 @property (nonatomic, strong) NSArray *cityGroupArray;
@@ -71,6 +74,20 @@
     // 4> 遮盖按钮
     self.coverButton.alpha = 0;
 
+}
+
+/** 
+    搜索框内容变化
+ */
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchText.length > 0) {
+        self.searchResultVC.view.hidden = NO;
+        // 传递搜索的text
+        self.searchResultVC.searchText = searchText;
+    } else {
+        self.searchResultVC.view.hidden = YES;
+        NSLog(@"2 ");
+    }
 }
 
 /** 
@@ -139,5 +156,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - 懒加载搜索结果控制器
+- (YHCitySearchResultVC *)searchResultVC {
+    if (_searchResultVC == nil) {
+        // 1> 创建控制器
+        YHCitySearchResultVC *searchResultVC = [YHCitySearchResultVC new];
+        // 2> 添加控制器
+        [self addChildViewController:searchResultVC];
+        // 3> 添加控制器的视图
+        [self.view addSubview:searchResultVC.view];
+        // 4> 添加约束
+        [searchResultVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.coverButton);
+        }];
+        // 5> 记录
+        _searchResultVC = searchResultVC;
+    }
+    // 6> 返回
+    return _searchResultVC;
+}
 
 @end

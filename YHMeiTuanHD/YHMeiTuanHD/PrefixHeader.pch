@@ -25,5 +25,6 @@
 
 // 第三方库
 #import "YYModel.h"
+#import "Masonry.h"
 
 #endif
