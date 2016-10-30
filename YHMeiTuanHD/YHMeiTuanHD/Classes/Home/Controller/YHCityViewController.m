@@ -11,6 +11,8 @@
 
 @interface YHCityViewController () <UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 /** cityGroupPlist的模型数据 */
 @property (nonatomic, strong) NSArray *cityGroupArray;
 
@@ -23,7 +25,11 @@
     
     [self setupNav];
     [self loadCityGroupData];
-}
+    
+    // 设置表格右侧索引标题颜色 下面两种方法均可
+//    self.tableView.tintColor = YHColor(21, 188, 173, 1.0);
+    self.tableView.sectionIndexColor = YHColor(21, 188, 173, 1.0);
+} 
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -53,6 +59,12 @@
     return cityGroupModel.title;
 }
 
+/**
+    设置分组索引
+ */
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.cityGroupArray valueForKey:@"title"];
+}
 
 #pragma mark - 加载数据
 - (void)loadCityGroupData {
