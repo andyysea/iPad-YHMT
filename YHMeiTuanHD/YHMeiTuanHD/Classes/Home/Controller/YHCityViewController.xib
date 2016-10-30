@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YHCityViewController">
             <connections>
+                <outlet property="coverButton" destination="IAX-Ob-LJg" id="pcI-g3-Jgp"/>
                 <outlet property="tableView" destination="Q7e-3b-xEl" id="a9y-A2-Ehc"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kh4-4H-end"/>
             </connections>
@@ -18,7 +19,13 @@
             <subviews>
                 <searchBar contentMode="redraw" placeholder="请输入城市名或拼音" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="al1-ef-sLH">
                     <rect key="frame" x="15" y="15" width="377" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fab-EH-w5I"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="fav-Po-ZnK"/>
+                    </connections>
                 </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q7e-3b-xEl">
                     <rect key="frame" x="0.0" y="74" width="407" height="432"/>
@@ -27,15 +34,26 @@
                         <outlet property="dataSource" destination="-1" id="mie-NZ-uNL"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAX-Ob-LJg">
+                    <rect key="frame" x="0.0" y="74" width="407" height="432"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="coverButtonClick:" destination="-1" eventType="touchUpInside" id="7M1-aw-PdF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="al1-ef-sLH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="40P-3L-5Bp"/>
+                <constraint firstAttribute="trailing" secondItem="IAX-Ob-LJg" secondAttribute="trailing" id="71d-Qb-qfL"/>
                 <constraint firstAttribute="bottom" secondItem="Q7e-3b-xEl" secondAttribute="bottom" id="7SN-Fa-c0R"/>
                 <constraint firstItem="al1-ef-sLH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Ar2-93-zwK"/>
                 <constraint firstAttribute="trailing" secondItem="Q7e-3b-xEl" secondAttribute="trailing" id="D8C-e4-mBG"/>
                 <constraint firstItem="Q7e-3b-xEl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HjA-nu-9aS"/>
+                <constraint firstItem="IAX-Ob-LJg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sb8-4A-cCE"/>
                 <constraint firstAttribute="trailing" secondItem="al1-ef-sLH" secondAttribute="trailing" constant="15" id="apI-3s-A3y"/>
+                <constraint firstItem="IAX-Ob-LJg" firstAttribute="top" secondItem="al1-ef-sLH" secondAttribute="bottom" constant="15" id="izR-ee-t4P"/>
+                <constraint firstAttribute="bottom" secondItem="IAX-Ob-LJg" secondAttribute="bottom" id="jYd-BU-W07"/>
                 <constraint firstItem="Q7e-3b-xEl" firstAttribute="top" secondItem="al1-ef-sLH" secondAttribute="bottom" constant="15" id="qt6-fC-3Ae"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
