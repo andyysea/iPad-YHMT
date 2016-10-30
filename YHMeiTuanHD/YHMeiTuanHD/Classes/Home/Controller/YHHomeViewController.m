@@ -9,6 +9,7 @@
 #import "YHHomeViewController.h"
 #import "YHHomeNavView.h"
 #import "YHCategoryViewController.h"
+#import "YHDistrictViewController.h"
 
 /** 可重用标示符 */
 static NSString *collectionCellID = @"collectionCellID";
@@ -45,6 +46,7 @@ static NSString *collectionCellID = @"collectionCellID";
     YHHomeNavView *districtNavView = [YHHomeNavView homeNavView];
     UIBarButtonItem *districtItem = [[UIBarButtonItem alloc] initWithCustomView:districtNavView];
     
+    [districtNavView.button addTarget:self action:@selector(districtClick) forControlEvents:UIControlEventTouchUpInside];
     // 4. 排序
     YHHomeNavView *sortNavView = [YHHomeNavView homeNavView];
     UIBarButtonItem *sortItem = [[UIBarButtonItem alloc] initWithCustomView:sortNavView];
@@ -81,6 +83,23 @@ static NSString *collectionCellID = @"collectionCellID";
     // 4> 展现分类控制器
     [self presentViewController:categoryVC animated:YES completion:nil];
 }
+
+/**
+    区域点击按钮的分类方法
+ */
+- (void)districtClick {
+    YHDistrictViewController *districtVC = [[YHDistrictViewController alloc] init];
+    // 1> 设置呈现样式
+    districtVC.modalPresentationStyle = UIModalPresentationPopover;
+    // 2> 取出popover视图
+    UIPopoverPresentationController *districtPopover = districtVC.popoverPresentationController;
+    // 3> 设置指向的 item
+    districtPopover.barButtonItem = self.navigationItem.leftBarButtonItems[2];
+    // 4> 展现分类控制器
+    [self presentViewController:districtVC animated:YES completion:nil];
+    
+}
+
 
 /** 
     搜索按钮的监听方法

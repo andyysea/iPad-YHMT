@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface YHHomeNavView : UIControl
-/** 
+
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
+
+/**
     导航条上面的自定含义 Item 视图
  */
 + (instancetype)homeNavView;
