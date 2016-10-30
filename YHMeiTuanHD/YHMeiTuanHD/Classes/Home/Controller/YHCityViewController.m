@@ -44,6 +44,15 @@
     searchBar.backgroundImage = [UIImage imageNamed:@"bg_login_textfield_hl"];
     // 3> 取消按钮
     [searchBar setShowsCancelButton:YES animated:YES];
+    
+    for (UIView *subView in searchBar.subviews[0].subviews) {
+        if ([subView isKindOfClass:[UIButton class]]) {
+            UIButton *button = (UIButton *)subView;
+            [button setTitle:@"取消" forState:UIControlStateNormal];
+            searchBar.tintColor = YHColor(21, 188, 173, 1.0);
+        }
+    }
+
     // 4> 遮盖按钮
     self.coverButton.alpha = 0.3;
 }
