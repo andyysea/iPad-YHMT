@@ -74,6 +74,10 @@
     // 4> 遮盖按钮
     self.coverButton.alpha = 0;
 
+    // 5> 清空搜索内容
+    searchBar.text = @"";
+    // 6> 搜索控制器隐藏
+    self.searchResultVC.view.hidden = YES;
 }
 
 /** 

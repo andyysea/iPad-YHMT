@@ -71,6 +71,10 @@
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"一共搜索到%zd个结果", self.searchResultArray.count];
+}
+
 #pragma mark - 懒加载
 - (NSMutableArray *)searchResultArray {
     if (_searchResultArray == nil) {
