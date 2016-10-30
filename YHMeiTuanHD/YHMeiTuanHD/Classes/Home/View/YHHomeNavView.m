@@ -21,6 +21,11 @@
 }
 
 
+- (void)awakeFromNib {
+    // 加上这个代码是为了防止导航栏的items 随着旋转发生变化
+    self.autoresizingMask = UIViewAutoresizingNone;
+}
+
 @end
 
 
