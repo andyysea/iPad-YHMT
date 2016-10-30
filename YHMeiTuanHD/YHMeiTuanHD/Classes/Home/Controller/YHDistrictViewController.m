@@ -7,6 +7,8 @@
 //
 
 #import "YHDistrictViewController.h"
+#import "YHDropdownView.h"
+
 
 @interface YHDistrictViewController ()
 
@@ -16,7 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    YHDropdownView *dropdownView = [YHDropdownView dropdownView];
+    dropdownView.y = self.view.subviews[0].height;
+    [self.view addSubview:dropdownView];
+    
+    CGFloat width = dropdownView.width;
+    CGFloat height = CGRectGetMaxY(dropdownView.frame);
+    
+    self.preferredContentSize = CGSizeMake(width, height);
 }
 
 
